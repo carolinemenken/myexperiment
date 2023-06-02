@@ -1,8 +1,15 @@
 {% extends "otree/Page.html" %}
+
 {% load otree static %}
 
 {% block global_styles  %}
+    <link href="{% static 'global/css/global.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'global/css/FriendlyChecks.css' %}">
+    <link rel="stylesheet" href="{% static 'global/css/VT_functionality.css' %}">
 {% endblock %}
 
 {% block global_scripts  %}
+       
+    <script src="{% static 'global/js/global.js' %}"></script> 
+
 {% endblock %}

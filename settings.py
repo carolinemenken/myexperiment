@@ -1,11 +1,26 @@
 from os import environ
 
 SESSION_CONFIGS = [
-    # dict(
-    #     name='public_goods',
-    #     app_sequence=['public_goods'],
-    #     num_demo_participants=3,
-    # ),
+     dict(
+        name='myEXP',
+        app_sequence=['Instructions','Task','Questionnaire'],
+        num_demo_participants=1,
+    ),
+    dict(
+        name='Task',
+        app_sequence=['Task'],
+        num_demo_participants=1,
+    ),
+    dict(
+        name='Instructions',
+        app_sequence=['Instructions'],
+        num_demo_participants=1,
+    ),
+    dict(
+        name='Questionnaire',
+        app_sequence=['Questionnaire'],
+        num_demo_participants=1,
+    ),
 ]
 
 # if you set a property in SESSION_CONFIG_DEFAULTS, it will be inherited by all configs
@@ -17,7 +32,8 @@ SESSION_CONFIG_DEFAULTS = dict(
     real_world_currency_per_point=1.00, participation_fee=0.00, doc=""
 )
 
-PARTICIPANT_FIELDS = []
+PARTICIPANT_FIELDS = ['BlockOrder','mTrials','lOrder','iRound1','iRightValue1','iAnsValue1','iRound2','iRightValue2','iAnsValue2',
+                                'startTime','iOutFocus','iFullscreenChanges','dTimeOutFocus','dPixelRatio','bCheckQ']
 SESSION_FIELDS = []
 
 # ISO-639 code
