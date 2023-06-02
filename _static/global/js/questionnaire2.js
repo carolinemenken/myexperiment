@@ -33,15 +33,14 @@
 function validInt(str) {return (!isNaN(parseInt(str)))};
 function validAge(str) {
     num = parseInt(str);
-    return (num>=18 && num<= 65);
+    return (num>=18 && num<= 122);
 }
-
 const countries = ["My country is not listed", "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Anguilla", "Antigua & Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia & Herzegovina", "Botswana", "Brazil", "British Virgin Islands", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Central Arfrican Republic", "Chad", "Chile", "China", "Colombia", "Congo", "Cook Islands", "Costa Rica", "Cote D Ivoire", "Croatia", "Cuba", "Curacao", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Falkland Islands", "Faroe Islands", "Fiji", "Finland", "France", "French Polynesia", "French West Indies", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guam", "Guatemala", "Guernsey", "Guinea", "Guinea Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Isle of Man", "Israel", "Italy", "Jamaica", "Japan", "Jersey", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauro", "Nepal", "Netherlands", "Netherlands Antilles", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "Norway", "Oman", "Pakistan", "Palau", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russia", "Rwanda", "Saint Pierre & Miquelon", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "St Kitts & Nevis", "St Lucia", "St Vincent", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor L'Este", "Togo", "Tonga", "Trinidad & Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks & Caicos", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Virgin Islands (US)", "Yemen", "Zambia", "Zimbabwe"];
-const likertScale = ['Strongly Disagree', 'Disagree', 'Neutral', 'Agree', 'Strongly Agree'];
+const likertScale = [ 'Strongly Disagree', 'Disagree', 'Neutral', 'Agree', 'Strongly Agree'];
 const likertValues = [1,2,3,4,5];
 const warningAutocomplete = 'Please select one item from the list';
 const warningEmpty = 'Please do not leave this question unanswered';
-const warningAge = 'Please provide a valid answer (number from 18 to 65)';
+const warningAge = 'Please provide a valid answer (number from 18 to 122)';
 const likertLimits = ['Strongly Disagree','Strongly Agree'];
 const figValues = [1,2,3];
 
@@ -50,104 +49,98 @@ const figValues = [1,2,3];
 // *********************************************************************
 
 const firstQuestions = [
-    {
-        question: "What is your age?",
-        name: "D1",
-        type: "shortOpen",
-        validate: validAge,
-        invalidMessage: warningAge,
-    },   
-    {
-        question: "Which gender do you identify the most with?",
-        name: "D2",
+    { 
+        question: "Men should be the primary financial providers",
+        name: "E8",
         type: "radio",
-        values: [1,2,3,4],
-        labels: [
-            "Female",
-            "Male",
-            "Other",
-            "Prefer not to say"]    
-    },      
-    {
-        question: "What is your nationality?",
-        name: "D3",
-        type: "autocomplete",
-        list: countries,
+        values: [1,2,3,4,5],
+        labels: ["Strongly disagree",
+                 "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"]
     },
     {
-        question: "What is your level of education?",
-        name: "D4",
+        question: "Women should be the primary caretakers of children",
+        name: "E9",
         type: "radio",
-        values: [1,2,3,4],
-        labels: [
-        "Less than high school",
-        "High school graduate",
-        "Some college",
-        "College graduate"]
+         values: [1,2,3,4,5],
+        labels: ["Strongly disagree",
+                 "Disagree",
+                "Neutral",
+                 "Agree",
+                "Strongly agree"]
     },
     {
-        question: "Do you want children in the future?",
-        name: "D5",
+        question: "If a wife works, her husband should take greater part in housework and children",
+        name: "E10",
         type: "radio",
-        values: [1,2,3,4],
-        labels: [
-        "Yes in the next five years",
-        "Yes but not in the next five years",
-        "I already have children",
-        "No"] 
+         values: [1,2,3,4,5],
+         labels: ["Strongly disagree",
+                  "Disagree",
+                 "Neutral",
+                  "Agree",
+                 "Strongly agree"]
     },
     {
-        question: "If you already have children, of what age are they?",
-        name: "D6",
-        type: "shortOpen",
+        question: "It is as important for a woman as for a man to support herself financially",
+        name: "E11",
+        type: "radio",
+         values: [1,2,3,4,5],
+        labels: ["Strongly disagree",
+                 "Disagree",
+                "Neutral",
+                 "Agree",
+                "Strongly agree"]
     },
     {
-        question: "Do you have a partner?",
-        name: "D7",
+        question: "It is as important for a man as for a woman to care for children ",
+        name: "E12",
         type: "radio",
-        values: [1,2,3],
-        labels: [
-            "Yes",
-            "No",
-            "It is complicated"]
-    },  
+         values: [1,2,3,4,5],
+        labels: ["Strongly disagree",
+                 "Disagree",
+                "Neutral",
+                 "Agree",
+                "Strongly agree"]
+    },
 ];
 // Add questionnaire questions in different orders
-const shuffleQuestions = []
-//     { 
-//         question: "Men should be the primary financial providers",
-//         name: "E8",
+const shuffleQuestions = [ ];
+//     {
+//         question: "How much do you think others valued 'GMA' compared to you?",
+//         name: "EQ1",
 //         type: "scale",
-//         values: LikertValues,
-//         limits: LikertLimits
+//         values: likertValues,
+//         limits: ['I valued it much more','They valued it much more']
+//     },    
+//     {
+//         question: "How much do you think others valued 'Personality (Conscientiousness)' compared to you?",
+//         name: "EQ2",
+//         type: "scale",
+//         values: likertValues,
+//         limits: ['I valued it much more','They valued it much more']
 //     },
 //     {
-//         question: "Women should be the primary caretakers of children",
-//         name: "E9",
+//         question: "How much do you think others valued 'Interview' compared to you?",
+//         name: "EQ3",
 //         type: "scale",
-//         values: LikertValues,
-//         limits: LikertLimits
+//         values: likertValues,
+//         limits: ['I valued it much more','They valued it much more']
 //     },
 //     {
-//         question: "If a wife works, her husband should take greater part in housework and children",
-//         name: "E10",
+//         question: "How much do you think others valued 'Gender' compared to you?",
+//         name: "EQ4",
 //         type: "scale",
-//         values: LikertValues,
-//         limits: LikertLimits
+//         values: likertValues,
+//         limits: ['I valued it much more','They valued it much more']
 //     },
 //     {
-//         question: "It is as important for a woman as for a man to support herself financially",
-//         name: "E11",
+//         question: "How much do you think others valued 'Odd/Even' compared to you?",
+//         name: "EQ5",
 //         type: "scale",
-//         values: LikertValues,
-//         limits: LikertLimits
-//     },
-//     {
-//         question: "It is as important for a man as for a woman to care for children ",
-//         name: "E12",
-//         type: "scale",
-//         values: LikertValues,
-//         limits: LikertLimits
+//         values: likertValues,
+//         limits: ['I valued it much more','They valued it much more']
 //     },
 // ];
   
