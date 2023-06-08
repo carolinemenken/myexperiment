@@ -56,6 +56,9 @@ class Questionnaire(Page):
     form_model = 'player'
     form_fields = ['D1', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7']
 
+class Betweenpage(Page):    
+    form_model = 'player' 
+
 class Questionnaire2(Page):
     form_model = 'player'
     form_fields = ['E8', 'E9', 'E10', 'E11', 'E12']
@@ -64,4 +67,4 @@ class Questionnaire2(Page):
 class Endpage(Page):    
     form_model = 'player' 
 
-page_sequence = [Questionnaire, Questionnaire2, Endpage]
+page_sequence = [Questionnaire, Betweenpage, Questionnaire2, Endpage]

@@ -34,8 +34,12 @@ class Constants(BaseConstants):
     SlidesInstructions = [
         dict(
             Title='Instructions',
-            path='Instructions/slide1.html',
+            path='Instructions/slide0.html',
         ),
+        dict(
+            Title='Instructions',
+            path='Instructions/slide1.html',
+        )
     ]
 
 class Subsession(BaseSubsession):

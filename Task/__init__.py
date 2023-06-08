@@ -20,11 +20,11 @@ class C(BaseConstants):
     bShuffleOptions = True # Within-subjects (every trial)
     # Constant info about your experiment 
     lAttributes = [
-            {"name": "Wage (on basis of full time)", "id": "a1", "lValues": [1,2]},
-            {"name": "Hours", "id": "a2", "lValues": [3,4]},
-            {"name": "Distance (in minutes)", "id": "a3", "lValues": [5,6]},
-            {"name": "Useful for society", "id": "a4", "lValues": [7,8]},
-            {"name": "Advance opportunity", "id": "a5", "lValues": [9,10]}, 
+            {"name": "Monthly salary (on basis of working full time)", "id": "a1", "lValues": [1,2]},
+            {"name": "Hours (per week)", "id": "a2", "lValues": [3,4]},
+            {"name": "Commuting distance (one-way)", "id": "a3", "lValues": [5,6]},
+            {"name": "Usefulness to society", "id": "a4", "lValues": [7,8]},
+            {"name": "Growth opportunities", "id": "a5", "lValues": [9,10]}, 
         ]
 
 
