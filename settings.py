@@ -36,6 +36,12 @@ PARTICIPANT_FIELDS = ['BlockOrder','mTrials','lOrder','iRound1','iRightValue1','
                                 'startTime','iOutFocus','iFullscreenChanges','dTimeOutFocus','dPixelRatio','bCheckQ']
 SESSION_FIELDS = []
 
+ROOMS = [
+    dict(
+        name='participants',
+        display_name='participants',
+    )
+]
 # ISO-639 code
 # for example: de, fr, ja, ko, zh-hans
 LANGUAGE_CODE = 'en'
