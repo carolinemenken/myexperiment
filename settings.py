@@ -38,8 +38,8 @@ SESSION_FIELDS = []
 
 ROOMS = [
     dict(
-        name='participants',
-        display_name='participants',
+        name='Participants',
+        display_name='Participants',
     )
 ]
 # ISO-639 code
