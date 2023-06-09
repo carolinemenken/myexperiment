@@ -44,11 +44,6 @@ class Player(BasePlayer):
     # EQ4 = models.IntegerField()
     # EQ5 = models.IntegerField()
     # Final Checks for Prolific
-    dPayoff     = models.FloatField()
-    iOutFocus   = models.IntegerField()
-    iFullscreenChanges = models.IntegerField()
-    dTimeOutFocus = models.FloatField()
-    bCheckQ = models.BooleanField()
     sProlificID = models.StringField()
 
 # PAGES
